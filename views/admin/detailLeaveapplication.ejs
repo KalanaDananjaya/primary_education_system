@@ -1,0 +1,46 @@
+<% include ../partials/header %>
+
+<link href="/stylesheets/fullcalendar.css" rel="stylesheet" media="screen">
+<link href="/stylesheets/calendar.css" rel="stylesheet">
+<div class="page-content">
+    <div class="row">
+        <div class="col-md-2">
+            <% include navBar.ejs %>
+        </div>
+        <div class="col-md-10">
+            <div class="col-md-1"></div>
+
+            <!--leave applications-->
+
+            <div class="col-md-8">
+
+                <h2 style="border-bottom:20px solid white;">Leave Application</h2>
+
+
+                <div class="form-group">
+                    <label for="disabledInput" class="col-sm-2 control-label">Name</label>
+                    <div class="col-sm-10">
+                        <input class="form-control"  type="text" placeholder="<%= application.username%>" disabled>
+                    </div>
+
+
+                    <label for="disabledInput" class="col-sm-2 control-label">From(Date)</label>
+                    <div class="col-sm-10">
+                        <input class="form-control"  type="text" placeholder="<%= application.startdate%>" disabled>
+                    </div>
+
+                    <label for="disabledInput" class="col-sm-2 control-label">To(Date)</label>
+                    <div class="col-sm-10">
+                        <input class="form-control"  type="text" placeholder="<%= application.enddate%>" disabled>
+                    </div>
+
+                    <label for="disabledInput" class="col-sm-2 control-label">Reason</label>
+                    <div class="col-sm-10">
+                        <input class="form-control"  type="text" placeholder="<%= application.reason%>" disabled>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+<% include ../partials/footer %>

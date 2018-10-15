@@ -1,0 +1,31 @@
+<% include ../partials/header %>
+
+<link href="/stylesheets/fullcalendar.css" rel="stylesheet" media="screen">
+<link href="/stylesheets/calendar.css" rel="stylesheet">
+<div class="page-content">
+    <div class="row">
+        <div class="col-md-2">
+            <% include navbar.ejs %>
+        </div>
+        <div class="col-md-10">
+            <div class="col-md-1"></div>
+
+            <!--leave applications-->
+
+            <div class="col-md-7">
+
+                <h2>Leave Applications</h2>
+
+                <ul class="list-group">
+                    <% leave.forEach(function(leaveApplication){ %>
+                    <li class="list-group-item"><%= leaveApplication.username%><span button type="button"  class="btn info" style="float: right;font-size: 16px;"><a href="/principal/leave/<%=leaveApplication.username%>">View application</a></button></span></li>
+                    <%})%>
+
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+<% include ../partials/footer %>

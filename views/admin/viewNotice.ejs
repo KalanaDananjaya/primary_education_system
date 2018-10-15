@@ -1,0 +1,26 @@
+<% include ../partials/header %>
+
+<link href="/stylesheets/fullcalendar.css" rel="stylesheet" media="screen">
+<link href="/stylesheets/calendar.css" rel="stylesheet">
+
+<div class="page-content">
+    <div class="row">
+        <div class="col-md-2">
+            <% include navBar.ejs %>
+        </div>
+
+        <div class="col-md-8" style="background-color:#F5FFFA; height:250px">
+            <div class="row" >
+                <h4 style="text-align:center;"> Announcements</h4>
+            </div>
+            <p>
+                <%= notice.notice%>
+            </p>
+        </div>
+
+
+    </div>
+</div>
+
+
+<% include ../partials/footer %>

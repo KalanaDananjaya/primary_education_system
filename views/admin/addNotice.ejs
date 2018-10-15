@@ -1,0 +1,31 @@
+<% include ../partials/header %>
+
+<link href="/stylesheets/fullcalendar.css" rel="stylesheet" media="screen">
+<link href="/stylesheets/calendar.css" rel="stylesheet">
+
+<div class="page-content">
+    <div class="row">
+        <div class="col-md-2">
+            <% include navBar.ejs %>
+        </div>
+
+
+        <div class="col-md-8" style="background-color:#F5FFFA; height:250px;border-right: 20px solid white;">
+            <ul>
+                <a href="/announcement/view" ><i class="fas fa-comment" style="font-size:24px"></i>view announcements</a>
+            </ul>
+            <form class="form-horizontal" role="form" action="/announcement" method="POST">
+                <div class="form-group">
+                    <label for="comment">Add a new announcement:</label>
+                    <textarea class="form-control" rows="5" id="comment" required type="text" name="announcement"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+
+    </div>
+</div>
+
+
+<% include ../partials/footer %>

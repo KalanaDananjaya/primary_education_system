@@ -1,0 +1,38 @@
+<% include ../partials/header %>
+
+<link href="/stylesheets/fullcalendar.css" rel="stylesheet" media="screen">
+<link href="/stylesheets/calendar.css" rel="stylesheet">
+<div class="page-content">
+    <div class="row">
+        <div class="col-md-2">
+            <% include navbar %>
+        </div>
+        <div class="col-md-10">
+
+            <div class="content-box-large">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="content-box-large">
+                                <% notices.forEach(function (notice) { %>
+                                <div class="panel-heading">
+                                    <div class="panel-title"><%= notice.topic%></div>
+
+                                    <div class="panel-options">
+                                        <a href="#" data-rel="collapse"><i class="glyphicon glyphicon-refresh"></i></a>
+                                        <a href="#" data-rel="reload"><i class="glyphicon glyphicon-cog"></i></a>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <%= notice.notice%>
+                                </div>
+                                <%})%>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<% include ../partials/footer %>
